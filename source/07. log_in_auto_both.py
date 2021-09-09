@@ -52,12 +52,12 @@ def find_encoding_info(txt):
 class Main():
     def __init__(self):
 
-        webbrowser.open('https://urclass.codestates.com/login')
+        # webbrowser.open('https://urclass.codestates.com/login')
 
-        chrome_options = Options()
-        chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
-        chrome_driver = webdriver.Chrome()
-        driver = webdriver.Chrome(chrome_driver, options=chrome_options)
+        # chrome_options = Options()
+        # chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
+        # chrome_driver = webdriver.Chrome()
+        # driver = webdriver.Chrome(chrome_driver, options=chrome_options)
         print("실행할 메인 클래스")
 
         # 접속 메일 서버
@@ -87,7 +87,7 @@ class Main():
         print('Subject', subject)
 
         message = ''
-
+        # print(email_message.is_multipart())
         print('[CONTENT]')
         print('=' * 160)
         if email_message.is_multipart():
@@ -108,7 +108,7 @@ class Main():
         print(message)
         print('=' * 160)
 
-        # webbrowser.open(self.hyperlinks)
+        webbrowser.open(self.hyperlinks)
 
         # # 읽음으로 메일 서버의 flag 변경하기
         # self.session.store(num, '+FLAGS', '\SEEN')
